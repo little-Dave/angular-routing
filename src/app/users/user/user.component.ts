@@ -9,7 +9,7 @@ import { identity } from 'rxjs';
 })
 export class UserComponent implements OnInit {
   user: {id: number, name: string};
-
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
