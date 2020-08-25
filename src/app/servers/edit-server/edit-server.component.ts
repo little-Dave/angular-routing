@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { ServersService } from '../servers.service';
 
@@ -21,7 +21,7 @@ export class EditServerComponent implements OnInit {
     this.route.queryParams
       .subscribe(
         (params: Params) => {
-          this.allowEdit = queryParams['allowEdit'] === '1' ? true : false;
+          this.allowEdit = params['allowEdit'] === '1' ? true : false;
         }
       );
     this.route.fragment.subscribe();
